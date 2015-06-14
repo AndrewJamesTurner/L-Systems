@@ -23,7 +23,11 @@ class Lsystem
 
         std::vector<char> grammer = {'X','F','+','-','[',']'};
         std::vector<char> predecessor = {'X', 'F'};
-        std::vector<std::string> successor = { "F−[[X]+X]+F[+FX]−X", "FF" };
+        std::vector<std::string> successor = { "F-[[X]+X]+F[+FX]-X", "FF" };
+
+        //std::vector<char> grammer = {'F','+','-'};
+        //std::vector<char> predecessor = {'F'};
+        //std::vector<std::string> successor = { "F+F-F-F+F" };
 
         std::string word;
 

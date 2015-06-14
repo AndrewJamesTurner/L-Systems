@@ -6,8 +6,10 @@ int main(void){
 
     Lsystem lsystem("X");
 
-    for(int i=0; i<7; i++)
+    for(int i=0; i<6; i++)
         lsystem.iterate();
+
+
 
    // std::cout << lsystem;
 

@@ -45,6 +45,8 @@ void Lsystem::iterate(void){
     for (unsigned int i = 0; i < word.length(); i++){
     //for(auto i = word.begin(); i != word.end(); i++){
 
+
+
         if(isInPredecessor(word[i])){
             newWord += successor[getPredecessorIndex(word[i])];
         }
