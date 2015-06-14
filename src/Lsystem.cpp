@@ -8,6 +8,8 @@ Lsystem::Lsystem(std::string axiom)
         std::cout << "Error: invalid axiom.\n";
         exit(0);
     }
+
+    srand(time(NULL));
 }
 
 Lsystem::~Lsystem()
@@ -48,7 +50,15 @@ void Lsystem::iterate(void){
 
 
         if(isInPredecessor(word[i])){
-            newWord += successor[getPredecessorIndex(word[i])];
+
+            double randNum = (double)rand() / RAND_MAX;
+
+            if(randNum < 0.3333)
+                newWord += successor[getPredecessorIndex(word[i])];
+            else if(randNum < 0.66666)
+                newWord += successor2[getPredecessorIndex(word[i])];
+            else
+                newWord += successor3[getPredecessorIndex(word[i])];
         }
 
         else{

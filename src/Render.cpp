@@ -11,7 +11,7 @@ Render::~Render()
 }
 
 
-void Render::drawLsystem(Lsystem lsystem){
+void Render::drawLsystem(Lsystem lsystem, double distance, double _angle){
 
 
 
@@ -30,21 +30,21 @@ void Render::drawLsystem(Lsystem lsystem){
 
         if(*i == 'F'){
 
-            sf::RectangleShape line(sf::Vector2f(Distance, 2));
+            sf::RectangleShape line(sf::Vector2f(distance, 2));
             line.setPosition(currentPosition.x, currentPosition.y);
             line.setRotation(currentPosition.angle);
             window->draw(line);
 
-            currentPosition.x += Distance * cos(currentPosition.angle * M_PI / 180.0);
-            currentPosition.y += Distance * sin(currentPosition.angle  * M_PI / 180.0);
+            currentPosition.x += distance * cos(currentPosition.angle * M_PI / 180.0);
+            currentPosition.y += distance * sin(currentPosition.angle  * M_PI / 180.0);
         }
 
         else if(*i == '-'){
-            currentPosition.angle -= Angle;
+            currentPosition.angle -= _angle;
         }
 
         else if(*i == '+'){
-            currentPosition.angle += Angle;
+            currentPosition.angle += _angle;
         }
 
         else if(*i == '['){

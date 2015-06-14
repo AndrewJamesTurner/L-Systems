@@ -6,7 +6,7 @@
 #include "Lsystem.h"
 #include <math.h>
 
-const double Distance = 2;
+const double Distance = 10;
 const double Angle = 25;
 
 struct Position
@@ -24,7 +24,7 @@ class Render
         Render(sf::RenderWindow* _window);
         virtual ~Render();
 
-        void drawLsystem(Lsystem lsystem);
+        void drawLsystem(Lsystem lsystem, double distance, double _angle);
 
     protected:
 

@@ -4,10 +4,9 @@
 
 int main(void){
 
-    Lsystem lsystem("X");
+    //double angle = 10;
 
-    for(int i=0; i<6; i++)
-        lsystem.iterate();
+
 
 
 
@@ -18,7 +17,7 @@ int main(void){
     // create the window
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(1000, 800), "My window", sf::Style::Default, settings);
 
     // create the renderer
     Render render(&window);
@@ -26,6 +25,12 @@ int main(void){
     // run the program as long as the window is open
     while (window.isOpen())
     {
+
+        Lsystem lsystem("F");
+
+        for(int i=0; i<rand() % 6 + 3; i++)
+            lsystem.iterate();
+
         // check all the window's events that were triggered since the last iteration of the loop
         sf::Event event;
         while (window.pollEvent(event))
@@ -39,10 +44,14 @@ int main(void){
         window.clear(sf::Color::Black);
 
         // draw everything here...
-        render.drawLsystem(lsystem);
+        render.drawLsystem(lsystem, rand() % 10 + 3, rand() % 20 + 15);
 
         // end the current frame
         window.display();
+
+       // std::cin.get();
+
+//        angle++;
     }
 
 
