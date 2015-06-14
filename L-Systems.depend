@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1434302153 source:/home/andy/Desktop/L-Systems/L-Systems/src/Lsystem.cpp
+	"Lsystem.h"
+
+1434213332 /home/andy/Desktop/L-Systems/L-Systems/include/Lsystem.h
+	<vector>
+	<string>
+	<iostream>
+
+1434302087 source:/home/andy/Desktop/L-Systems/L-Systems/src/Main.cpp
+	<SFML/Graphics.hpp>
+	"Lsystem.h"
+	"Render.h"
+
+1434302161 /home/andy/Desktop/L-Systems/L-Systems/include/Render.h
+	<SFML/Graphics.hpp>
+	<string>
+	"Lsystem.h"
+	<math.h>
+
+1434302047 source:/home/andy/Desktop/L-Systems/L-Systems/src/Render.cpp
+	"Render.h"
+
